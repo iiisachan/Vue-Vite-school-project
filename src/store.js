@@ -13,6 +13,7 @@ const mutations = {
     state.col3.push(...value.splice(-10))
   },
   clearOldQuery(state) {
+    console.log('clear')
     ;(state.col2 = []), (state.col3 = []), (state.col1 = [])
   }
 }

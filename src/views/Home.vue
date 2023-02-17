@@ -13,8 +13,7 @@ import Gallery from '../components/Gallery.vue';
     methods: {
       submit(e) {
         e.preventDefault()
-        this.$router.push(this.query)
-        this.query = null
+        this.$router.push(this.query.toLowerCase())
         this.$store.commit('clearOldQuery')
       }
     }
@@ -42,7 +41,7 @@ import Gallery from '../components/Gallery.vue';
 
   <h2 class="search-titel">Discover</h2>
 
-  <Gallery :query="query"> </Gallery>
+  <Gallery :query="null"> </Gallery>
 </template>
 
 <style>

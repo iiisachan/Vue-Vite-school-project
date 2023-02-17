@@ -31,7 +31,6 @@
           }
         }
       },
-
       showTopBtn() {
         window.onscroll = () => {
           if ((document.documentElement.scrollTop = 500)) {
@@ -64,16 +63,22 @@
     },
     watch: {
       query() {
+        this.$store.commit('clearOldQuery')
         this.page = 0
+        this.get()
+      },
+      endPage() {
         this.get()
       }
     },
-
     mounted() {
       this.showTopBtn()
       this.infiniteScroll()
     },
     created() {
+      console.log('gallery created clear')
+      this.$store.commit('clearOldQuery')
+      console.log('gallery created get')
       this.get()
     },
     data() {
@@ -83,7 +88,8 @@
         selectedImg: null,
         selectedImgAlt: null,
         selectedUser: null,
-        zoomIn: false
+        zoomIn: false,
+        endPage: false
       }
     },
     props: {

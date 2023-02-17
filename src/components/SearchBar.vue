@@ -12,7 +12,7 @@
         this.$router.push(this.query.toLowerCase())
         this.show = false
         this.query = null
-        this.$store.commit('clearOldQuery')
+        // this.$store.commit('clearOldQuery')
       },
       hideOverlay() {
         this.show = !this.show

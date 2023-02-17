@@ -12,10 +12,8 @@
 <!-- HTML code -->
 <template>
   <nav>
-    <div class="logo">
-      <RouterLink class="logo" to="/">
-        <img src="./../assets/logo.JPG" alt="" />
-      </RouterLink>
+    <div>
+      <RouterLink class="logo" to="/"> Logo </RouterLink>
     </div>
     <SearchBar />
   </nav>
@@ -41,6 +39,9 @@
 
   .logo {
     flex-grow: 1;
+    color: black;
+    font-weight: 600;
+    font-size: 32px;
     text-decoration: none;
     max-width: 250px;
     min-width: 150px;

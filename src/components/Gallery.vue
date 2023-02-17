@@ -76,9 +76,7 @@
       this.infiniteScroll()
     },
     created() {
-      console.log('gallery created clear')
       this.$store.commit('clearOldQuery')
-      console.log('gallery created get')
       this.get()
     },
     data() {
